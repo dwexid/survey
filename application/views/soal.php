@@ -16,7 +16,7 @@
 					<td><?=$i++?></td>
 					<td><?=$s->uraian?></td>
 					<td>
-						<a href="<?=base_url('index.php/home/edit')?>" class="btn btn-xs btn-primary">Edit</a>
+						<a href="<?=base_url('index.php/home/update/'.$s->id)?>" class="btn btn-xs btn-primary">Edit</a>
 						<a href="<?=base_url('index.php/home/delete/'.$s->id)?>" class="btn btn-xs btn-warning">Delete</a>
 					</td>
 				</tr>

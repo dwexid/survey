@@ -23,6 +23,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="<?=base_url('index.php/do_survey')?>">Mulai Survey</a></li>
+	        <li><a href="<?=base_url('index.php/do_survey/result')?>">Hasil Survey</a></li>
 	        <li><a href="#">About</a></li>
 	        <li><a href="#">Contact Us</a></li>
 	      </ul>

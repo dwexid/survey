@@ -38,6 +38,25 @@ class Home extends CI_Controller {
 		redirect(base_url('index.php/home'));
 	}
 
+	public function update($id){
+		if($this->input->post('soal')!=null){
+			$data['uraian'] = $this->input->post('soal');
+			$this->mdl_soal->update($id,$data);
+
+			redirect(base_url());
+			//
+		}else{
+			$result 	 = $this->db->where('id',$id)
+									->get('soal')
+									->row();
+			$data['res'] = $result;
+
+			$this->load->view('header');
+			$this->load->view('edit',$data);
+			$this->load->view('footer');
+		}
+	}
+
 	public function delete($id){
 		$this->mdl_soal->delete($id);
 		redirect(base_url('index.php/home'));

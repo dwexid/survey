@@ -33,4 +33,8 @@ class mdl_soal extends CI_Model{
 		$this->db->where('id', $id)
 				 ->delete('soal');
 	}
+
+	public function get_jml(){
+		return $this->db->query('select * from soal')->num_rows();
+	}
 }
